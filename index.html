@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    
+    
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+    <title>Random Password Generator</title>
+    
+</head>
+<body>
+    <!-- Copyright -->
+    <div class="author-text">
+        <p>Made by <a href="https://github.com/jahansamreen" target="_blank"><b>Samreen Jahan</b></a>
+        </p>
+    </div>
+
+    <div class="container">
+        <h1>Generate a <br>Random Password</h1>
+        <div class="header">
+            
+            <input  type="text" placeholder="Password" id="pwd" />
+            <button class="copy" id="copy" style="color: white">
+                <i class="fas fa-copy" onclick="copyPassword()"></i>
+            </button>
+        </div>
+
+        <div class="body">
+            <small id="pwdcopy" class="alert" style=" color: darkgreen; margin-top: 15px; margin-left: 50px;">password
+                copied to clipboard 👍 </small>
+            <div class="form-control" style="margin-bottom: 10px;">
+                <label style="color: #333; font-weight: bold; font-size: 18px; margin-right: 10px;  " for="plength">Password Length</label>
+                <input type="number" id="plength" value="8" min="1" max="30">
+            </div>
+                <div class="grid-class">
+                <div class="form-control">
+                    <input type="checkbox" id="puppercase" checked>
+                    <label id="uppertxt" for="puppercase" style="color: darkgreen; padding: 10px 10px; font-weight: bolder; font-size: 19px;  "> Uppercase</label>
+                    
+                    <!-- <input type="checkbox" checked="checked" class="checkbox" id="puppercase" /> -->
+                </div>
+                <div class="form-control" >
+                    <input type="checkbox" id="plowercase">
+                    <label id="lowertxt" for="plowercase" style="padding: 10px 10px;">Lowercase</label>
+                    
+                    <!-- <input type="checkbox"  class="checkbox" id="plowercase" /> -->
+                </div>
+            
+
+            
+            <div class="form-control">
+                <input type="checkbox" id="pnumber">
+                <label id="numtxt" for="pnumber" style="padding: 10px 10px;"> Number</label>
+                
+                <!-- <input type="checkbox" class="checkbox" id="pnumber" /> -->
+            </div>
+
+            <div class="form-control" >
+                <input type="checkbox" id="psymbol">
+                <label id="spltxt" for="psymbol" style="padding: 10px 10px;">Special Character</label>
+                
+                <!-- <input type="checkbox" id="psymbol" checked> -->
+                
+            </div>
+            </div>
+
+            <div class="testing"> 
+                <button id="submit">Generate Password <i class="fa-solid fa-unlock-keyhole font_icon1"></i></button>
+                <button class="reset" onClick=location.reload()>Reset <i class="fa-solid fa-arrows-rotate"></i></button>
+             </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
